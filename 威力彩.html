@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩</title>
+
+</head>
+<script>
+    // 方法一
+    const rand = (min, max) => {
+        return Math.round(Math.random() * (max - min)) + min
+    }
+    const groupA = []
+    for (let i = 0; i < 6; i++) {
+        const num = rand(1, 38)
+        if (groupA.includes(num)) {
+            i--
+        } else {
+            groupA.push(num)
+        }
+    }
+    document.write(groupA.join(', '))
+
+    // 方法二
+    // while(groupA.length<6){
+        // const num=rand(1,38)
+        // if(!groupA.includes(num)){
+            // groupA.push(num)
+        // }
+    // }
+
+    // 方法三
+    // const numbers=[]
+    // for(let i=1;i<=38;i++){
+        // numbers.push(i)
+    // }
+    // for(let i=0;i<6;i++){
+        // const index=rand(0,numbers.length-1)
+        // a.push(numbers[index])
+        // numbers.splice(index,1)
+    // }
+</script>
+
+<body>
+
+</body>
+
+</html>
